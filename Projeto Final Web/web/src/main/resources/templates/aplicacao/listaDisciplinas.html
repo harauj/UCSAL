@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head> 
+	<title>Diário da disciplina</title>
+</head>
+<body>	
+	<h3>Disciplinas </h3>	
+	<p>	ID&emsp;&emsp;Nome&emsp;&emsp;Professor&emsp;&emsp;Dia&emsp;&emsp;Horário&emsp;&emsp;Estudantes </p> <hr>	
+	<div th:each="disciplina : ${disciplinas}">		
+		<div class="row">				
+			 <p>
+				<span th:text="${disciplina.id}"></span> &emsp;
+			 	<span th:text="${disciplina.nome}"></span> &emsp;
+			 	<span th:text="${disciplina.professor}"></span> &emsp;
+			 	<span th:text="${disciplina.dia}"></span> &emsp;
+			 	<span th:text="${disciplina.horario}"></span> &emsp;
+			 	<span th:text="${disciplina.estudantes}"></span>
+			 </p>
+		</div>
+	</div>
+</body>
+</html>
